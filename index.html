@@ -1,192 +1,32 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prashant Nandanwar | Java Specialist</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
-    <style>
-        :root {
-            --primary: #6366f1;
-            --secondary: #a855f7;
-            --bg: #0b0f1a;
-            --glass: rgba(255, 255, 255, 0.03);
-            --glass-border: rgba(255, 255, 255, 0.1);
-            --text: #f1f5f9;
-        }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); overflow-x: hidden; }
+    <!-- Title -->
+    <title>Prashant Nandanwar | Java Backend Developer</title>
 
-        /* Navigation */
-        nav {
-            position: fixed; top: 0; width: 100%; z-index: 1000;
-            background: rgba(11, 15, 26, 0.8); backdrop-filter: blur(10px);
-            padding: 20px 50px; display: flex; justify-content: space-between; align-items: center;
-        }
-        .nav-links { display: flex; gap: 30px; }
-        .nav-links a { color: var(--text); text-decoration: none; font-weight: 500; cursor: pointer; transition: 0.3s; }
-        .nav-links a:hover { color: var(--primary); }
+    <!-- Remove favicon (tab icon) -->
+    <link rel="icon" href="data:,">
 
-        /* Main Container */
-        .content-section { 
-            display: none; padding: 120px 10% 60px; min-height: 100vh;
-            animation: fadeIn 0.5s ease;
-        }
-        .content-section.active { display: block; }
+    <!-- SEO Meta -->
+    <meta name="description" content="Portfolio of Prashant Nandanwar — Java Backend Developer specializing in Spring Boot, payment systems, and secure fintech APIs." />
+    <meta name="author" content="Prashant Nandanwar" />
 
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+    <!-- Open Graph -->
+    <meta property="og:title" content="Prashant Nandanwar | Java Backend Developer" />
+    <meta property="og:description" content="Building scalable payment systems & secure backend APIs" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
 
-        /* Glass Cards */
-        .card {
-            background: var(--glass); backdrop-filter: blur(5px);
-            border: 1px solid var(--glass-border); padding: 30px;
-            border-radius: 20px; margin-bottom: 25px;
-        }
+    <!-- Twitter Meta -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+  </head>
 
-        /* Hero/Home */
-        .hero { text-align: center; display: flex; flex-direction: column; justify-content: center; height: 100vh; }
-        .hero h1 { font-size: 4rem; margin-bottom: 10px; background: linear-gradient(to right, var(--primary), var(--secondary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-
-        /* Project & Skill Badges */
-        .badge { background: var(--primary); color: white; padding: 5px 12px; border-radius: 20px; font-size: 0.8rem; margin: 5px; display: inline-block; }
-        
-        /* Grid Layouts */
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
-
-        /* Form */
-        input, textarea { width: 100%; padding: 12px; margin: 10px 0; background: var(--glass); border: 1px solid var(--glass-border); color: white; border-radius: 8px; }
-        button { background: var(--primary); color: white; border: none; padding: 12px 30px; border-radius: 8px; cursor: pointer; }
-    </style>
-</head>
-<body>
-
-<nav>
-    <div class="logo"><strong>PRASHANT.</strong></div>
-    <div class="nav-links">
-        <a onclick="showPage('home')">Home</a>
-        <a onclick="showPage('about')">About</a>
-        <a onclick="showPage('skills')">Skills</a>
-        <a onclick="showPage('experience')">Experience</a>
-        <a onclick="showPage('projects')">Projects</a>
-        <a onclick="showPage('contact')">Contact</a>
-    </div>
-</nav>
-
-<section id="home" class="content-section active">
-    <div class="hero">
-        <h1>Prashant Nandanwar</h1>
-        <p style="font-size: 1.5rem; color: #94a3b8;">Java Backend Developer | Scalable Solutions Expert</p>
-        <div style="margin-top: 30px;">
-            <button onclick="showPage('projects')">View Portfolio</button>
-        </div>
-    </div>
-</section>
-
-<section id="about" class="content-section">
-    <h2>Professional Journey</h2>
-    <div class="card">
-        <p>I am a dedicated Java Developer with a focus on backend development, combining technical expertise with a passion for crafting efficient and scalable solutions[cite: 5]. With over 2.3 years of experience, I specialize in the fintech domain[cite: 29].</p>
-        <br>
-        <p>Currently based in Gurugram, I am committed to delivering high-quality code and collaborating within cross-functional teams to drive technical excellence[cite: 4, 5].</p>
-    </div>
-</section>
-
-<section id="skills" class="content-section">
-    <h2>Core Expertise</h2>
-    <div class="grid">
-        <div class="card">
-            <h3><i class="fa fa-code"></i> Languages</h3>
-            <p>Java 8, Java 17, Java/J2EE[cite: 10].</p>
-        </div>
-        <div class="card">
-            <h3><i class="fa fa-server"></i> Frameworks</h3>
-            <p>Spring Boot, Spring MVC, Hibernate[cite: 10].</p>
-        </div>
-        <div class="card">
-            <h3><i class="fa fa-shield-halved"></i> Security</h3>
-            <p>JWT, Authentication, Authorization, Encryption[cite: 10, 58].</p>
-        </div>
-        <div class="card">
-            <h3><i class="fa fa-cloud"></i> DevOps/Tools</h3>
-            <p>AWS, Maven, Postman, STS, IntelliJ[cite: 10, 33].</p>
-        </div>
-    </div>
-</section>
-
-<section id="experience" class="content-section">
-    <h2>Professional Experience</h2>
-    <div class="card">
-        <div style="display: flex; justify-content: space-between;">
-            <h3>Java Backend Developer</h3>
-            <span>Oct 2023 - Present [cite: 24, 25]</span>
-        </div>
-        <p><strong>Sambhav Pay Payment Solutions Pvt. Ltd. [cite: 21]</strong></p>
-        <br>
-        <ul>
-            <li>Engineered Pay-In and Pay-Out modules using Spring Boot and RESTful APIs[cite: 40, 42].</li>
-            <li>Optimized database schemas in MYSQL for high availability and performance[cite: 45].</li>
-            <li>Implemented global exception handling and input validation for data integrity[cite: 47].</li>
-            <li>Developed real-time webhook posting modules for instant transaction status updates[cite: 55].</li>
-        </ul>
-    </div>
-</section>
-
-<section id="projects" class="content-section">
-    <h2>Key Projects</h2>
-    <div class="grid">
-        <div class="card">
-            <h3>Payin & Payout System [cite: 34]</h3>
-            <p>A comprehensive payment platform supporting BBPS, DMT, and AEPS[cite: 27].</p>
-            <div class="badge">Spring Boot</div> <div class="badge">MSSQL</div> <div class="badge">RBL Bank API</div>
-            <p style="margin-top:15px; font-size: 0.9rem;">Integrated multiple vendors like ISERVEU and SubPaisa via REST APIs[cite: 60].</p>
-        </div>
-        <div class="card">
-            <h3>Pay-In Wallet Module [cite: 56]</h3>
-            <p>Designed balance tracking and secure transaction management systems[cite: 56].</p>
-            <div class="badge">JPA</div> <div class="badge">JWT</div> <div class="badge">Encryption</div>
-            <p style="margin-top:15px; font-size: 0.9rem;">Implemented JWT-based authentication with IP and geo-location tracking.</p>
-        </div>
-        <div class="card">
-            <h3>Bulk Payout & UPI Integration [cite: 53]</h3>
-            <p>Development of high-volume banking APIs for UPI and payout services[cite: 53].</p>
-            <div class="badge">Java 17</div> <div class="badge">Banking APIs</div>
-        </div>
-    </div>
-</section>
-
-<section id="contact" class="content-section">
-    <h2>Let's Connect</h2>
-    <div class="grid">
-        <div class="card">
-            <p><i class="fa fa-envelope"></i> nandanwarprashant469@gmail.com [cite: 2]</p>
-            <p><i class="fa fa-phone"></i> +91 8390535956 [cite: 4]</p>
-            <p><i class="fa fa-location-dot"></i> Gurugram, Haryana [cite: 4]</p>
-        </div>
-        <div class="card">
-            <form>
-                <input type="text" placeholder="Name">
-                <input type="email" placeholder="Email">
-                <textarea rows="4" placeholder="Message"></textarea>
-                <button type="button">Send Message</button>
-            </form>
-        </div>
-    </div>
-</section>
-
-<script>
-    function showPage(pageId) {
-        // Hide all sections
-        const sections = document.querySelectorAll('.content-section');
-        sections.forEach(section => section.classList.remove('active'));
-        
-        // Show selected section
-        document.getElementById(pageId).classList.add('active');
-        
-        // Scroll to top
-        window.scrollTo(0, 0);
-    }
-</script>
-
-</body>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>
