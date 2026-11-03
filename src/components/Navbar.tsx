@@ -34,12 +34,11 @@ const Navbar = () => {
         }
 
         .logo-text {
-          font-weight: 800;
-          font-size: 22px;
-          color:white;
-          line-height: 1.2;
-          text-align: center;
-        }
+  font-weight: 800;
+  font-size: 22px;
+  line-height: 1.2;
+  text-align: center;
+}
 
         .line {
           width: 100%;
@@ -87,7 +86,7 @@ const Navbar = () => {
             <div className="line w-24"></div>
 
             {/* Name */}
-            <div className="logo-text " >
+            <div className="logo-text text-foreground">
               PRASHANT <br />
               
               <span className="text-blue-400">NANDANWAR</span>

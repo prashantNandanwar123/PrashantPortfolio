@@ -63,7 +63,11 @@ const App = () => {
           }
 
           .line {
+<<<<<<< HEAD
+            width: 400px;
+=======
             width: 120px;
+>>>>>>> 7765436ca7e504e2edd291cd65e8f5b008a87dbc
             height: 2px;
             position: relative;
             overflow: hidden;

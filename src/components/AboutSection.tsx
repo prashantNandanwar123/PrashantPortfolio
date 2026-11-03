@@ -9,7 +9,7 @@ const highlights = [
 
 const AboutSection = () => (
   <section id="about" className="section-padding">
-    <div className="container mx-auto max-w-5xl">
+    <div className="container mx-auto">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}

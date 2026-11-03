@@ -30,11 +30,34 @@ const projects = [
     tags: ["Webhooks", "SLF4J", "Pagination"],
     features: ["Live Updates", "Error Handling", "Data Export"],
   },
+  {
+  icon: CreditCard,
+  title: "Payment Gateway Integrations",
+  desc: "Integrated multiple banking partners and payment gateways for secure Payin and Payout processing with real-time transaction handling, webhooks, reconciliation, and settlement support.",
+  tags: [
+    "Spring Boot",
+    "Payment Gateway",
+    "REST APIs",
+    "Webhooks",
+    "FinTech",
+  ],
+  features: [
+    "Payin: IDFC",
+    "Paynoww",
+    "SubPaisa",
+    "Unlimit",
+    "iServeU",
+    "Payout: BenakPay",
+    "UniqPay",
+    "HDFC",
+    "RBI",
+  ],
+},
 ];
 
 const ProjectsSection = () => (
   <section id="projects" className="section-padding bg-surface">
-    <div className="container mx-auto max-w-5xl">
+    <div className="container mx-auto">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
